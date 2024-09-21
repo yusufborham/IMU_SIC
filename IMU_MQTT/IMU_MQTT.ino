@@ -286,6 +286,6 @@ void loop() {
   readGyro() ;
   String acc_value = GYRO_ZOUT - ofsetGyroZ ;
   Serial.println(acc_value);
-  client.publish("test/topic", acc_value);
+  client.publish("IMU_READINGS", acc_value);
   delay(50);
 }
